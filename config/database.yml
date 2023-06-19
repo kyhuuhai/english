@@ -1,0 +1,32 @@
+development:
+  clients:
+    default:
+      database: english_development
+      hosts:
+        - db:27017
+      options:
+        server_selection_timeout: 1
+
+test:
+  clients:
+    default:
+      database: myapp_test
+      hosts:
+        - db:27017
+      options:
+        server_selection_timeout: 5000
+        max_pool_size: 5
+        retry_writes: true
+      # Set the MongoDB adapter
+      adapter: mongodb
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        server_selection_timeout: 5000
+        max_pool_size: 5
+        retry_writes: true
+      # Set the MongoDB adapter
+      adapter: mongodb
