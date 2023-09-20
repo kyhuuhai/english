@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   def test
-    puts "7"
-    puts "8"
-    puts "9"
+    puts "c1"
+    puts "c2"
+    puts "c3"
   end
 end
